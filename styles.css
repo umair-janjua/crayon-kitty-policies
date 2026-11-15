@@ -1,0 +1,261 @@
+:root {
+  --bg-paper: #FFF8EE;
+  --bg-card: #FFFFFF;
+  --ink: #2D3142;
+  --ink-muted: #5C6274;
+  --coral: #FF6B6B;
+  --coral-dark: #E85555;
+  --peach: #FFE5D9;
+  --border: #F0E4D4;
+  --shadow: 0 8px 24px rgba(45, 49, 66, 0.07);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-paper);
+  color: var(--ink);
+  line-height: 1.65;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+}
+
+header {
+  background: var(--bg-card);
+  border-bottom: 2px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--ink-muted);
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: all 0.15s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--coral-dark);
+  background: var(--peach);
+}
+
+main {
+  flex: 1;
+  padding: 40px 24px 64px;
+}
+
+.document-container {
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: var(--shadow);
+}
+
+.doc-header {
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 24px;
+  margin-bottom: 28px;
+}
+
+.doc-header h1 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.meta-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+}
+
+.highlight-box {
+  background: var(--peach);
+  border-left: 5px solid var(--coral);
+  padding: 20px 24px;
+  border-radius: 14px;
+  margin-bottom: 32px;
+}
+
+.doc-section {
+  margin-bottom: 28px;
+}
+
+.doc-section h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+
+.doc-section p {
+  margin-bottom: 12px;
+  color: var(--ink-muted);
+}
+
+.doc-section ul {
+  margin: 8px 0 12px 22px;
+  color: var(--ink-muted);
+}
+
+.doc-section li {
+  margin-bottom: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th, td {
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  background: var(--bg-paper);
+  font-weight: 700;
+  color: var(--ink);
+  width: 28%;
+}
+
+td {
+  color: var(--ink-muted);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.card {
+  background: var(--bg-paper);
+  border: 2px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--coral);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: var(--coral-dark);
+}
+
+.card p {
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+}
+
+footer {
+  background: var(--bg-card);
+  border-top: 2px solid var(--border);
+  padding: 24px 0;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.footer-links a,
+a {
+  color: var(--coral-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-links a:hover,
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .document-container {
+    padding: 24px;
+  }
+  .doc-header h1 {
+    font-size: 1.65rem;
+  }
+  th, td {
+    display: block;
+    width: 100%;
+  }
+}
